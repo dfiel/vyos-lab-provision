@@ -1,7 +1,7 @@
 ---
 
 hostname: rtr-2
-domain_name: lab.local
+domain_name: AS0.lab
 
 loopback:
   dum0:
