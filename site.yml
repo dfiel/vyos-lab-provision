@@ -2,9 +2,13 @@
 
 - hosts: all
 
-  connection: local
-  user: '{{ ansible_ssh_user }}'
+  connection:  ansible.netcommon.network_cli
   gather_facts: 'no'
+
+  vars:
+      ansible_network_os: vyos.vyos.vyos
+      ansible_user: vyos
+      ansible_password: vyos
 
   roles:
     - hostname
