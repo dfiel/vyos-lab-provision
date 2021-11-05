@@ -26,7 +26,7 @@ interfaces:
     mask: /30
 
 bgp:
-  asn: 65001
+  asn: 65501
   neighbor:
     - {address: 10.10.1.5, remote_as: 65501}
     - {address: 10.10.12.6, remote_as: 65502}
