@@ -1,0 +1,32 @@
+---
+
+hostname: AS4-RTR1
+domain_name: AS4.lab
+
+loopback:
+  dum0:
+    alias: dummy loopback0
+    address: 10.10.0.41
+    mask: /32
+
+interfaces:
+  eth1:
+    alias: 4R1-3R1
+    address: 10.10.34.2
+    mask: /30
+
+  eth2:
+    alias: 4R1-4R2
+    address: 10.10.4.1
+    mask: /30
+
+bgp:
+  asn: 65504
+  neighbor:
+    - {address: 10.10.34.1, remote_as: 65503}
+    - {address: 10.10.4.2, remote_as: 65504}
+  networks:
+    - {network: 10.10.34.0, mask: /30}
+    - {network: 10.10.4.0, mask: /30}
+    - {network: 10.10.0.41, mask: /32}
+  maxpath: 2
