@@ -1,0 +1,38 @@
+---
+
+hostname: AS2-RTR3
+domain_name: AS2.lab
+
+loopback:
+  dum0:
+    alias: dummy loopback0
+    address: 10.10.0.23
+    mask: /32
+
+interfaces:
+  eth1:
+    alias: 2R3-2R1
+    address: 10.10.2.6
+    mask: /30
+
+  eth2:
+    alias: 2R3-1R3
+    address: 10.10.12.6
+    mask: /30
+    
+  eth3:
+    alias: 2R3-3C
+    address: 10.10.2.9
+    mask: /30
+
+bgp:
+  asn: 65502
+  neighbor:
+    - {address: 10.10.2.5, remote_as: 65502}
+    - {address: 10.10.12.5, remote_as: 65501}
+  networks:
+    - {network: 10.10.2.4, mask: /30}
+    - {network: 10.10.12.4, mask: /30}
+    - {network: 10.10.2.8, mask: /30}
+    - {network: 10.10.0.23, mask: /32}
+  maxpath: 2
