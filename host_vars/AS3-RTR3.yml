@@ -1,7 +1,7 @@
 ---
 
 hostname: AS3-RTR3
-domain_name: AS2.lab
+domain_name: AS3.lab
 
 loopback:
   dum0:
