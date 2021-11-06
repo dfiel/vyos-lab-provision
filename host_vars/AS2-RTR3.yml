@@ -24,14 +24,21 @@ interfaces:
     alias: 2R3-3C
     address: 10.10.2.9
     mask: /30
+    
+  eth4:
+    alias: 2R3-2R2
+    address: 10.10.2.14
+    mask: /30
 
 bgp:
   asn: 65502
   neighbor:
     - {address: 10.10.2.5, remote_as: 65502}
     - {address: 10.10.12.5, remote_as: 65501}
+    - {address: 10.10.2.13, remote_as: 65502}
   networks:
     - {network: 10.10.2.4, mask: /30}
+    - {network: 10.10.2.12, mask: /30}
     - {network: 10.10.12.4, mask: /30}
     - {network: 10.10.2.8, mask: /30}
     - {network: 10.10.0.23, mask: /32}
