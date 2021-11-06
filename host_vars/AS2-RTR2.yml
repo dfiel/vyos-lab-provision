@@ -24,6 +24,11 @@ interfaces:
     alias: 2R2-4R3
     address: 10.10.24.1
     mask: /30
+    
+  eth4:
+    alias: 2R2-2R3
+    address: 10.10.2.13
+    mask: /30
 
 bgp:
   asn: 65502
@@ -31,8 +36,10 @@ bgp:
     - {address: 10.10.2.1, remote_as: 65502}
     - {address: 10.10.23.2, remote_as: 65503}
     - {address: 10.10.24.2, remote_as: 65504}
+    - {address: 10.10.2.14, remote_as: 65502}
   networks:
     - {network: 10.10.2.0, mask: /30}
+    - {network: 10.10.2.12, mask: /30}
     - {network: 10.10.23.0, mask: /30}
     - {network: 10.10.24.0, mask: /30}
     - {network: 10.10.0.22, mask: /32}
