@@ -36,4 +36,4 @@ bgp:
     - {network: 10.10.23.0, mask: /30}
     - {network: 10.10.24.0, mask: /30}
     - {network: 10.10.0.22, mask: /32}
-  maxpath: 2
+  maxpath: 5
