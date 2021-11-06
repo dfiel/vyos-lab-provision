@@ -19,14 +19,21 @@ interfaces:
     alias: 1R1-1R2
     address: 10.10.1.1
     mask: /30
+    
+  eth3:
+    alias: 1R1-1R3
+    address: 10.10.1.13
+    mask: /30
 
 bgp:
   asn: 65501
   neighbor:
     - {address: 10.10.12.2, remote_as: 65502}
     - {address: 10.10.1.2, remote_as: 65501}
+    - {address: 10.10.1.14, remote_as: 65501}
   networks:
     - {network: 10.10.12.0, mask: /30}
     - {network: 10.10.1.0, mask: /30}
+    - {network: 10.10.1.12, mask: /30}
     - {network: 10.10.0.11, mask: /32}
   maxpath: 2
