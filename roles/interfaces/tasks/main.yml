@@ -1,4 +1,8 @@
 ---
+- name: disable dhcp default route
+  vyos_config:
+    lines:
+    - set interfaces ethernet eth0 dhcp-options no-default-route
 
 - name: write interfaces config
   vyos_config:
