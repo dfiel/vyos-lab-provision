@@ -6,7 +6,9 @@ set protocols bgp {{ bgp.asn }} maximum-paths ibgp '{{ bgp.maxpath }}'
 {% for item in bgp.neighbor %}
 set protocols bgp {{ bgp.asn }} neighbor {{ item.address }} ebgp-multihop '2'
 set protocols bgp {{ bgp.asn }} neighbor {{ item.address }} remote-as '{{ item.remote_as }}'
+{% if bgp.asn == item.remote_as %}
 set protocols bgp {{ bgp.asn }} neighbor {{ item.address }} nexthop-self
+{% endif %}
 {% endfor %}
 {% for item in bgp.networks %}
 set protocols bgp {{ bgp.asn }} network '{{ item.network }}{{ item.mask }}'
