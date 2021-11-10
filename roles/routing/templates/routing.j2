@@ -1,6 +1,7 @@
 {% if bgp is defined %}
 {% if bgp.maxpath is defined %}
 set protocols bgp {{ bgp.asn }} maximum-paths ebgp '{{ bgp.maxpath }}'
+set protocols bgp {{ bgp.asn }} maximum-paths ibgp '{{ bgp.maxpath }}'
 {% endif %}
 {% for item in bgp.neighbor %}
 set protocols bgp {{ bgp.asn }} neighbor {{ item.address }} ebgp-multihop '2'
