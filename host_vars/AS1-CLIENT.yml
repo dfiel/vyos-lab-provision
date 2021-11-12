@@ -1,5 +1,6 @@
 ---
 
+hostname: AS1-CLIENT
 fqdn: AS1-CLIENT.AS1.lab
 
 interfaces:
