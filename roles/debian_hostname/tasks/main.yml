@@ -9,3 +9,4 @@
     path: /etc/hosts
     regexp: '(\s+)bullseye(\s+.*)?$'
     replace: '\1{{ fqdn }}\2'
+  become: yes
