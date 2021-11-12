@@ -7,3 +7,4 @@ interfaces:
   eth1:
     address: 10.10.3.10
     mask: /30
+    gateway: 10.10.1.9
