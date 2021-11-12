@@ -8,3 +8,8 @@
       iface eth1 inet static
           address {{ interfaces['eth1']['address'] }}{{ interfaces['eth1']['mask'] }}
           gateway {{ interfaces['eth1']['gateway'] }}
+
+- name: restart networking service
+  service:
+    name: networking
+    state: restarted
