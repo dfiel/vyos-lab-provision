@@ -1,0 +1,5 @@
+---
+
+- name: write hostname and domain-name
+  hostname:
+    name: '{{ fqdn }}'
