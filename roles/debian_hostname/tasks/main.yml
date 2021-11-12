@@ -5,8 +5,9 @@
     name: '{{ fqdn }}'
 
 - name: update /etc/hosts
-  replace:
+  lineinfile:
+    state: present
     path: /etc/hosts
-    regexp: '(\s+)bullseye(\s+.*)?$'
-    replace: '\1{{ fqdn }}\2'
+    line: "127.0.0.2 {{ hostname }} {{ fqdn }}"
+    regexp: "^127.0.0.2"
   become: yes
