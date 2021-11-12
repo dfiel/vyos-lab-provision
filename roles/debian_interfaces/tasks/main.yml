@@ -1,0 +1,10 @@
+---
+
+- name: update /etc/network/interfaces
+  blockinfile:
+    path: /etc/network/interfaces
+    marker: "# {mark} ANSIBLE MANAGED BLOCK"
+    block: |
+      iface eth1 inet static
+          address {{ interfaces['eth1']['address'] }}{{ interfaces['eth1']['mask'] }}
+          gateway {{ interfaces['eth1']['gateway'] }}
