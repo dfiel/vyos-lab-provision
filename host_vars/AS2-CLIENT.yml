@@ -1,0 +1,8 @@
+---
+
+fqdn: AS2-CLIENT.AS2.lab
+
+interfaces:
+  eth1:
+    address: 10.10.2.10
+    mask: /30
