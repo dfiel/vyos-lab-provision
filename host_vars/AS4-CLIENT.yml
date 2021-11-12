@@ -1,0 +1,9 @@
+---
+
+hostname: AS4-CLIENT
+fqdn: AS4-CLIENT.AS4.lab
+
+interfaces:
+  eth1:
+    address: 10.10.4.10
+    mask: /30
