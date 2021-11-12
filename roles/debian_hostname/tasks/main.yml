@@ -1,5 +1,11 @@
 ---
 
-- name: write hostname and domain-name
+- name: write fqdn
   hostname:
     name: '{{ fqdn }}'
+
+- name: update /etc/hosts
+  replace:
+    path: /etc/hosts
+    regexp: '(\s+)bullseye(\s+.*)?$'
+    replace: '\1{{ fqdn }}\2'
