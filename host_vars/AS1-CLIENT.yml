@@ -1,0 +1,9 @@
+---
+
+hostname: AS1-CLIENT
+domain_name: AS1.lab
+
+interfaces:
+  eth1:
+    address: 10.10.1.10
+    mask: /30
