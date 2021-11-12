@@ -1,6 +1,6 @@
 ---
 
-- hosts: all
+- hosts: vyos
 
   connection:  ansible.netcommon.network_cli
   gather_facts: 'no'
@@ -11,6 +11,6 @@
       ansible_password: vyos
 
   roles:
-    - hostname
-    - interfaces
-    - routing
+    - vyos_hostname
+    - vyos_interfaces
+    - vyos_routing
