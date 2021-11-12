@@ -17,5 +17,8 @@
 
 - hosts: debian
 
+  vars:
+      ansible_become: yes
+
   roles:
     - debian_hostname
