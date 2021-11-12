@@ -1,0 +1,9 @@
+---
+
+hostname: AS3-CLIENT
+fqdn: AS3-CLIENT.AS3.lab
+
+interfaces:
+  eth1:
+    address: 10.10.3.10
+    mask: /30
