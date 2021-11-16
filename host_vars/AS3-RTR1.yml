@@ -20,7 +20,7 @@ interfaces:
     address: 10.10.3.5
     mask: /30
     
-  eth2:
+  eth3:
     alias: 3R1-3R2
     address: 10.10.3.13
     mask: /30
